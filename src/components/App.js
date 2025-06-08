@@ -75,7 +75,7 @@ return <tr>
         
       </table>
      <label>
-      Sort By:
+      sort by:
       <select value={sortBy} onChange={handleChange}>
         <option value="title" >title</option>
         <option value="author" >author</option>
@@ -83,7 +83,7 @@ return <tr>
       </select>
      </label>
 <label>
-  Order:
+  order:
       <select value={order} onChange={handleChange2} >
         <option value="asc" >asc</option>
         <option value="desc" >desc</option>
