@@ -55,23 +55,25 @@ function handleChange2(e){
 
   return (
     <div>
-      <input type="text" onChange={(e) => { setSearch(e.target.value) }} />
+      <h1>Books list</h1>
       <ul>
         {sortedBooks.map((v)=>{
           return <li>{v.title}</li>
         })}
       </ul>
      <label>
+      Sort By:
       <select value={sortBy} onChange={handleChange}>
-        <option>title</option>
-        <option>author</option>
-        <option>publisher</option>
+        <option value="title" >title</option>
+        <option value="author" >author</option>
+        <option value="publisher" >publisher</option>
       </select>
      </label>
 <label>
+  Order:
       <select value={order} onChange={handleChange2} >
-        <option>asc</option>
-        <option>desc</option>
+        <option value="asc" >asc</option>
+        <option value="desc" >desc</option>
       </select>
      </label>
     </div>
