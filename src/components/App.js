@@ -55,12 +55,25 @@ function handleChange2(e){
 
   return (
     <div>
-      <h1>Books list</h1>
-      <ul>
-        {sortedBooks.map((v)=>{
-          return <li>{v.title}</li>
-        })}
-      </ul>
+      <h1>Books List</h1>
+      <table>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Publisher</th>
+          <th>ISBN</th>
+        </tr>
+        
+          {sortedBooks.map((v)=>{
+return <tr>
+  <td>{v.title}</td>
+  <td>{v.author}</td>
+  <td>{v.publisher}</td>
+  <td>{v.primary_isbn13}</td>
+</tr>
+          })}
+        
+      </table>
      <label>
       Sort By:
       <select value={sortBy} onChange={handleChange}>
